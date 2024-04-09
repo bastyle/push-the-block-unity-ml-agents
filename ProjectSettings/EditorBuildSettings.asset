@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ML-Agents/Examples/RollerBall_BB/Scenes/Week10.unity
     guid: 4b6c4a8b8db85f346b3bf0a82f85c667
-  - enabled: 1
+  - enabled: 0
     path: Assets/ML-Agents/Examples/PushBlock/Scenes/PushBlock.unity
     guid: ae8cc75939e3e4d07a79c8c6a08b54f4
+  - enabled: 1
+    path: Assets/ML-Agents/Examples/PushBlock/Scenes/DifficultySelector.unity
+    guid: 8f213aa8be271b54287036ea3897c491
+  - enabled: 1
+    path: Assets/ML-Agents/Examples/PushBlock/Scenes/GitGudFinalProjectPart2.unity
+    guid: a676366faf520044fb94074314ea5464
   m_configObjects: {}
