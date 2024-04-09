@@ -22,7 +22,7 @@ public class DifficultySelector : MonoBehaviour
                SceneManager.LoadScene("GitGudFinalProjectPart2Medium");
                 break;
             case "hard":
-               SceneManager.LoadScene("GitGudFinalProjectPart2EasyHard");
+               SceneManager.LoadScene("GitGudFinalProjectPart2Hard");
                 break;
             default:
                 Debug.LogError("Invalid difficulty: " + difficulty);
