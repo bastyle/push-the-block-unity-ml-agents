@@ -30,5 +30,10 @@ public class GameOverText : MonoBehaviour
         // Update the text and enable it
         text.text = playerWon ? "You Win!" : "You Lose!";
         gameObject.SetActive(true);
+        GameObject agentObject = GameObject.FindGameObjectWithTag("agent");
+        if (agentObject != null)
+        {
+            agentObject.SetActive(false);
+        }
     }
 }
