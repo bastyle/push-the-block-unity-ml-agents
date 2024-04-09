@@ -5,6 +5,11 @@
 
 using UnityEngine;
 
+public enum BlockType
+{
+    Player=1,
+    Agent=0
+}
 public class GoalDetect : MonoBehaviour
 {
     /// <summary>
@@ -14,12 +19,24 @@ public class GoalDetect : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public PushAgentBasic agent;  //
+    public BlockType type;
 
     void OnCollisionEnter(Collision col)
     {
         // Touched goal.
         if (col.gameObject.CompareTag("goal"))
         {
+            switch (type)
+            {
+                case BlockType.Agent:
+                    Debug.Log("Goal!!!!!!!!!!!! Agent");
+                    break;
+                case BlockType.Player:
+                    Debug.Log("Goal!!!!!!!!!!!! Player");
+                    break;
+                
+            }
+            //Debug.Log("agent:: ");
             agent.ScoredAGoal();
         }
     }

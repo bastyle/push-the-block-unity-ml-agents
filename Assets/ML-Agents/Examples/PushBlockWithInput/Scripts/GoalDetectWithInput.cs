@@ -20,6 +20,7 @@ public class GoalDetectWithInput : MonoBehaviour
         // Touched goal.
         if (col.gameObject.CompareTag("goal"))
         {
+            
             agent.ScoredAGoal();
         }
     }
