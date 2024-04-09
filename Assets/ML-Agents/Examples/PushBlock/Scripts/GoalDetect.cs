@@ -36,8 +36,8 @@ public class GoalDetect : MonoBehaviour
                     break;
                 
             }
-            //Debug.Log("agent:: ");
             agent.ScoredAGoal();
+            ScoreManager.instance.UpdateScore(type);
         }
     }
 }
