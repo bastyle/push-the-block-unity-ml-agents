@@ -29,10 +29,10 @@ public class GoalDetect : MonoBehaviour
             switch (type)
             {
                 case BlockType.Agent:
-                    Debug.Log("Goal!!!!!!!!!!!! Agent");
+                    //Debug.Log("Goal!!!!!!!!!!!! Agent");
                     break;
                 case BlockType.Player:
-                    Debug.Log("Goal!!!!!!!!!!!! Player");
+                    //Debug.Log("Goal!!!!!!!!!!!! Player");
                     break;
                 
             }

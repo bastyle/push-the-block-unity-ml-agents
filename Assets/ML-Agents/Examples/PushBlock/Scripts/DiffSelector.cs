@@ -11,18 +11,5 @@ public class DiffSelector : MonoBehaviour
         string difficulty = PlayerPrefs.GetString("difficulty");
         Debug.Log("diffi::: " + difficulty);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-       // BehaviorParameters bp = GetComponent<BehaviorParameters>();
-        //bp.Model = new ModelAsset();
-        
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
