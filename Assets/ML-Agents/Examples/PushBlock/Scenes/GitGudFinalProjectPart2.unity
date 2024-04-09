@@ -860,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AgentArea
       objectReference: {fileID: 0}
+    - target: {fileID: 1489716781518988, guid: 03bcc81e249714a22bb411dddcc5d15e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1724888327628444, guid: 03bcc81e249714a22bb411dddcc5d15e, type: 3}
       propertyPath: m_IsActive
       value: 0
