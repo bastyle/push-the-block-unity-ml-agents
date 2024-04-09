@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     public Text agentScoreText;
     public Text playerScoreText;
+    public int maxScore = 10;
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore(BlockType type)
     {
+        Debug.Log("updating..........");
         if (type == BlockType.Agent)
         {
             agentScore++;
@@ -36,5 +38,12 @@ public class ScoreManager : MonoBehaviour
             playerScore++;
             playerScoreText.text = "" + playerScore;
         }
+        // Check if the game is over
+        if (agentScore >= maxScore || playerScore >= maxScore)
+        {
+            GameOverText.instance.ShowGameOver(playerScore >= maxScore);
+        }
     }
+
+
 }
