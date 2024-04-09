@@ -11,7 +11,8 @@ public class ScoreManager : MonoBehaviour
 
     public Text agentScoreText;
     public Text playerScoreText;
-    public int maxScore = 10;
+    public const int DefaultGoals = 1;
+    private int maxScore = DefaultGoals;
 
     void Awake()
     {
@@ -22,6 +23,30 @@ public class ScoreManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+        string difficulty = PlayerPrefs.GetString("difficulty");
+        int goals = PlayerPrefs.GetInt("goals", DefaultGoals); 
+        Debug.Log("diffi::: " + difficulty + "goals::" + goals);
+        maxScore = goals;
+        GameObject textObject = GameObject.FindGameObjectWithTag("FT");
+        if (textObject != null)
+        {
+            Debug.Log("textObject != null!!");
+            // Get the Text component and set its value
+            Text text = textObject.GetComponent<Text>();
+            if (text != null)
+            {
+                Debug.Log("changing FT value!!");
+                text.text = "FT" + goals;
+            }
+            else
+            {
+                Debug.LogError("No Text component found on GameObject with tag 'FT'");
+            }
+        }
+        else
+        {
+            Debug.LogError("No GameObject found with tag 'FT'");
         }
     }
 

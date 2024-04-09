@@ -181,7 +181,6 @@ MonoBehaviour:
   playerScore: 0
   agentScoreText: {fileID: 182117374}
   playerScoreText: {fileID: 536788170}
-  maxScore: 3
 --- !u!1 &182117372
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009000884}
   - component: {fileID: 1009000887}
+  - component: {fileID: 1009000888}
   m_Layer: 0
   m_Name: SingleCam
   m_TagString: MainCamera
@@ -667,6 +667,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &1009000888
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009000883}
+  m_Enabled: 1
 --- !u!1001 &1143198547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,7 +1399,7 @@ GameObject:
   - component: {fileID: 2077225818}
   m_Layer: 5
   m_Name: PlayerGoals (1)
-  m_TagString: Untagged
+  m_TagString: FT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,7 +1457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FT10
+  m_Text: FT--
 --- !u!222 &2077225819
 CanvasRenderer:
   m_ObjectHideFlags: 0
