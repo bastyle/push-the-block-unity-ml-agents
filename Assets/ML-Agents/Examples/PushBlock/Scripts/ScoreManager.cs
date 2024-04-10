@@ -26,17 +26,17 @@ public class ScoreManager : MonoBehaviour
         }
         string difficulty = PlayerPrefs.GetString("difficulty");
         int goals = PlayerPrefs.GetInt("goals", DefaultGoals); 
-        Debug.Log("diffi::: " + difficulty + "goals::" + goals);
+        //Debug.Log("diffi::: " + difficulty + "goals::" + goals);
         maxScore = goals;
         GameObject textObject = GameObject.FindGameObjectWithTag("FT");
         if (textObject != null)
         {
-            Debug.Log("textObject != null!!");
+            //Debug.Log("textObject != null!!");
             // Get the Text component and set its value
             Text text = textObject.GetComponent<Text>();
             if (text != null)
             {
-                Debug.Log("changing FT value!!");
+                //Debug.Log("changing FT value!!");
                 text.text = "FT" + goals;
             }
             else
@@ -52,7 +52,7 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore(BlockType type)
     {
-        Debug.Log("updating..........");
+        //Debug.Log("updating..........");
         if (type == BlockType.Agent)
         {
             agentScore++;

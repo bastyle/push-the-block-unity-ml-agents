@@ -31,6 +31,7 @@ TagManager:
   - purpleGoal
   - tile
   - FT
+  - pausePanel
   layers:
   - Default
   - TransparentFX
