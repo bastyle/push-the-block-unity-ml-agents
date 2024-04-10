@@ -69,3 +69,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: markers
+    uniqueID: 4090230869
+    locked: 0
+  - name: base
+    uniqueID: 3886214187
+    locked: 0
