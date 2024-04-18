@@ -26,7 +26,7 @@ public class GoalDetect : MonoBehaviour
         // Touched goal.
         if (col.gameObject.CompareTag("goal"))
         {
-            switch (type)
+            /*switch (type)
             {
                 case BlockType.Agent:
                     //Debug.Log("Goal!!!!!!!!!!!! Agent");
@@ -35,9 +35,15 @@ public class GoalDetect : MonoBehaviour
                     //Debug.Log("Goal!!!!!!!!!!!! Player");
                     break;
                 
-            }
+            }*/
+            Debug.Log("Agent!!!!!!!!!!!! Player");
             agent.ScoredAGoal();
-            ScoreManager.instance.UpdateScore(type);
+            //ScoreManager.instance.UpdateScore(type);
+            ScoreManager.instance.UpdateScore(BlockType.Agent);
+        } else if (col.gameObject.CompareTag("playerGoal")) {
+            Debug.Log("Goal!!!!!!!!!!!! Player");
+            agent.ScoredAGoal();
+            ScoreManager.instance.UpdateScore(BlockType.Player);
         }
     }
 }

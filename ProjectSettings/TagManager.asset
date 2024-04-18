@@ -32,6 +32,7 @@ TagManager:
   - tile
   - FT
   - pausePanel
+  - playerGoal
   layers:
   - Default
   - TransparentFX
