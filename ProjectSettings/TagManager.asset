@@ -33,6 +33,7 @@ TagManager:
   - FT
   - pausePanel
   - playerGoal
+  - dropDown
   layers:
   - Default
   - TransparentFX

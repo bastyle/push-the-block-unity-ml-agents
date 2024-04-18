@@ -10,12 +10,12 @@ public class DifficultySelector : MonoBehaviour
 
     public InputField goalsInputField;
     public Text validationMessageText;
+    
     public void OnButtonClick(string difficulty)
     {
         Debug.Log("Button clicked! " + difficulty);
         PlayerPrefs.SetString("difficulty", difficulty);
-        // create 3 different scenes
-        //SceneManager.LoadScene("GitGudFinalProjectPart2");
+    
         string goals = goalsInputField.text;
         int goalsNumber;
         if (!int.TryParse(goals, out goalsNumber) || goalsNumber <= 0)
@@ -28,16 +28,30 @@ public class DifficultySelector : MonoBehaviour
 
         validationMessageText.text = "";
 
+        string mode = PlayerPrefs.GetString("mode", "Competition");
+        Debug.Log("mode selected:: "+mode);
+
+
         switch (difficulty)
         {
+                
             case "easy":
-                SceneManager.LoadScene("GitGudFinalProjectPart2Easy");
+                if ("Competition".Equals(mode))
+                    SceneManager.LoadScene("GitGudFinalProjectPart2Easy");
+                else
+                    SceneManager.LoadScene("GitGudFinalProjectPart2VsEasy");
                 break;
             case "medium":
-               SceneManager.LoadScene("GitGudFinalProjectPart2Medium");
+                if ("Competition".Equals(mode))
+                    SceneManager.LoadScene("GitGudFinalProjectPart2Medium");
+                else
+                    SceneManager.LoadScene("GitGudFinalProjectPart2VsMedium");
                 break;
             case "hard":
-               SceneManager.LoadScene("GitGudFinalProjectPart2Hard");
+                if ("Competition".Equals(mode))
+                    SceneManager.LoadScene("GitGudFinalProjectPart2Hard");
+                else
+                    SceneManager.LoadScene("GitGudFinalProjectPart2VsHard");
                 break;
             default:
                 Debug.LogError("Invalid difficulty: " + difficulty);
